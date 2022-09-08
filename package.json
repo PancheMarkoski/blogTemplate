@@ -25,6 +25,7 @@
     "node-fetch": "^3.2.4",
     "nodemailer": "^6.7.3",
     "react-facebook-login-lite": "^1.0.0",
+    "socket.io": "^4.5.2",
     "twilio": "^3.76.1"
   },
   "devDependencies": {

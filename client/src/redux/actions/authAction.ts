@@ -67,8 +67,8 @@ export const logout = () =>
     async (dispatch: Dispatch<IAuthType | IAlertType>) => {
         try {
             localStorage.removeItem('logged')
+            dispatch({ type: AUTH, payload: {} })
             await getAPI('logout')
-            window.location.href = "/"
 
             // dispatch({ type: AUTH, payload: {} }) - alternative to delete auth data in redux store without refresh
         } catch (err: any) {

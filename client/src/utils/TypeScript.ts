@@ -8,7 +8,7 @@ export type FormSubmit = FormEvent<HTMLFormElement>
 export type RootStore = ReturnType<typeof rootReducer>
 
 
-export interface IParams {
+export type IParams = {
     page?: string
     slug?: string
 }
@@ -58,5 +58,17 @@ export interface IBlog {
     description: string
     thumbnail: string | File
     category: string
+    createdAt: string
+}
+
+export interface IComment {
+    _id?: string
+    user: IUser
+    blog_id: string
+    blog_user_id: string
+    content: string
+    replyCM: IComment[]
+    reply_user?: IUser
+    comment_root?: string
     createdAt: string
 }
